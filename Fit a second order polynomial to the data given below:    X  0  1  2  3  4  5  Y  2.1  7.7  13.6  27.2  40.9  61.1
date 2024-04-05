@@ -1,0 +1,29 @@
+x=[0,1,2,3,4,5];
+y=[2.1,7.7,13.6,27.2,40.9,61.1];
+
+n=length(x)
+sx=sum(x)
+sy=sum(y)
+sx2=sum(x.*x)
+sx3=sum(x.*x.*x)
+sx4 =sum(x.*x.*x.*x)
+sxy=sum(x.*y)
+sx2y=sum(x.*x.*y)
+
+A=[n sx sx2;sx sx2 sx3; sx2 sx3 sx4]
+B=[sy sx sx2;sxy sx2 sx3; sx2y sx3 sx4]
+C=[n sy sx2; sx sxy sx3; sx2 sx2y sx4]
+D=[n sx sy;sx sx2 sxy; sx2 sx3 sx2y]
+
+if (det(A)==0)
+    disp("No solution")
+else
+    a0=det(B)/det(A)
+    a1=det(C)/det(A)
+    a2= det (D)/det(A)
+    m=poly(0, 'X')
+    m(1)=a2
+    m(2)=a1
+    m(3)=a0
+    disp(m)
+end
