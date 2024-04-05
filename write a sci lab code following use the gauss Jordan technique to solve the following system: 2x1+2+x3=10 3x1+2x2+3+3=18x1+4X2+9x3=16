@@ -1,0 +1,2 @@
+A=[2,1,1,10; 3,2,3,18; 1,4,9,16] i=1:3 j=i 
+while(A(i,i)==0&j<=3) k=1:4 B(1,k)=A(j+1,k)  A(j+1,k)=A(i,j)=B(1,k) end disp(A); j=j+1; disp(A) k=4-1 k=1:3 l=A(k,i)/A(i,i) i=1:3 
