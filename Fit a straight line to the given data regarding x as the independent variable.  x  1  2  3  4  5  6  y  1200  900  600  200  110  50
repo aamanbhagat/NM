@@ -1,0 +1,23 @@
+x=[1,2,3,4,5,6]
+y=[1200,900, 600, 200, 110,50];
+
+n=length(x)
+sx=sum(x)
+sy=sum(y)
+sx2=sum(x. *x)
+sxy=sum(x.*y)
+
+A=[n sx; sx sx2]
+B=[sy sx; sxy sx2]
+C=[n sy;sx sxy]
+
+if (det(A)==0)
+    disp("No solution")
+else
+    a0=det(B)/det(A)
+    a1=det(C)/det(A)
+    m=poly(0, 'X')
+    m(1)=a1
+    m(2)=a0
+    disp(m)
+end
