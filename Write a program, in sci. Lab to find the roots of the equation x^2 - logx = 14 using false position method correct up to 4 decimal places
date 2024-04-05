@@ -1,0 +1,11 @@
+function y = f(x)     y = x^2 - log(x) - 14; 
+endfunction 
+ 
+a = 3; b = 4; d = 0.0001; 
+printf('Successive iteration \ta\t b\t f(a)\t f(b)\t x1\n'); for i = 1:4 
+    x1 = b*f(a)/(f(a)-f(b)) + a*f(b)/(f(b)-f(a));     if f(a)*f(x1) > 0 then 
+b = x1;     else         a = x1;     end 
+    if abs(f(x1)) < d then 
+        break;     end 
+    printf(' \t%f  %f  %f  %f  %f\n', a, b, f(a), f(b), x1); end 
+printf('The root of the equation is %f  ', x1); 
