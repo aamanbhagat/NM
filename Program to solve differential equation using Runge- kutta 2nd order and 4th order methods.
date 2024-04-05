@@ -1,0 +1,39 @@
+deff('y=f(x,y)','y=y-x')
+y=2;
+x=0;
+h=0.1;
+
+k1=h*f(x,y);
+k2=h* f(x+h,y+k1);
+y1=y+(k1+k2)/2;
+printf("\n y(0.1) by second order runge kutta method:%0.4f",y1);
+
+y=y1;
+x=0.1;
+h = 0.1;
+k1=h*f(x,y);
+k2= h*f(x+h,y+k1);
+y1=y+(k1+k2)/2;
+printf("\n y(0.2) by second order runge kutta method:%0.4f",y1);
+
+y=2;
+x=0;
+h=0.1;
+k1 = h*f(x,y);
+k2=h*f(x+h/2,y+k1/2);
+k3=h*f(x+h/2,y+k2/2);
+k4=h*f(x+h,y+k3);
+y1=y+(k1+2*k2+2*k3+k4)/6;
+printf("\n y(0.1) by fourth order runge kutta method: %0.4f", y1);
+
+y=y1;
+x=0.1;
+h=0.1;
+k1=h*f(x,y);
+k2=h*f(x+h/2,y+k1/2);
+k3=h*f(x+h/2,y+k2/2);
+k4=h*f(x+h,y+k3);
+y1=y+(k1+2*k2+2*k3+k4)/6;
+printf("\n y(0.1) by fourth order runge kutta method:%0.4f",y1);
+
+y=2,x=0,h=0.1;
