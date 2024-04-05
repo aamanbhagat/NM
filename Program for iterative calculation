@@ -1,0 +1,10 @@
+Input: - 
+ 
+x = 0.5 y = 1  
+Truevalues = 1.648721 n= input("The result is correct to at least that significant figures?") 
+Es = (0.5*10^(2-n)) disp(Es, "Es = ") For i =1:50 
+previousApproximations = y y = y+((x^i)/factorial(i) )disp(y, "For y = ") 
+CurrentApproximations=y 
+Et=((TrueValue-CurrentApproximation)/TrueValue)*100 disp(Et, "True percent relative error, Et") 
+Ea((CurrentApproximation-previousApproximation)/CurrentApproximation)*100 disp(Ea, "Approximate percent relative error, Ea") if 
+(Ea<Es) break; end End 
