@@ -1,0 +1,5 @@
+deff('y=f(x)','y=x^3-9*x-1'); x1=3,x2=4; d=0.0001; 
+printf('Successive approximations \t  x1\t  \tx2\t \tm\t \tf(m)\n'); while abs(x1-x2)>d m=(x1+x2)/2; 
+printf("\t%f \t%f \t%f  \t%f\n",x1,x2,m,f(m)); if f(m)*f(x1)>0 x1=m; 
+else 
+x2=m; end x=x1+1; end; 
