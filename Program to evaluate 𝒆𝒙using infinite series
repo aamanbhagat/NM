@@ -1,0 +1,6 @@
+x=10 y=1 
+n=input("Number of iterations?") 
+for i=1:n y=y+((x^i)/factorial(i)) if(i==n) 
+disp(y,"Final value of y=") 
+else  disp(i,"when n=") disp(y,"y= ") end  
+end 
