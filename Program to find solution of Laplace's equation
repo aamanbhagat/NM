@@ -1,0 +1,33 @@
+n = 10;
+h = 1/n;
+u= zeros(n+1, n+1);
+u(1,:) = 0;
+u(n+1,:) = 0;
+u(:,1) = 0;
+u(:,n+1) = 0;
+
+maxiter =5000;
+tol= 1e-6;
+
+for k =1:maxiter
+    unew = u;
+    for i= 2:n
+        for j= 2:n
+            unew(i,j) =(1/4) *(u(i-1,j)+u(i+1,j)+u(i,j-1) + u(i,j+1));
+        end
+    end
+
+    if norm(unew - u, "inf") < tol
+        break;
+    end
+
+    u = unew;
+end
+
+disp(u);
+
+surf(u);
+xlabel("x");
+ylabel("y");
+zlabel("u");
+title("Laplace's equation");
