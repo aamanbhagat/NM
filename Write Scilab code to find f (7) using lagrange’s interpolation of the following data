@@ -1,0 +1,4 @@
+funcprot (0) n= input("no. of data :") for i=1:n printf("Enter x%dvalue", i) x(i)=input("") printf(" Enter yxdvalue", i) y(i)=input("") end 
+a= input("Enter value of a :") sum=0 for i=1:n product=1 for j=1:n if ji then continue end 
+product=product*(a-x(j))/(x(i)-x(j)) end 
+product=product*y(i) sum sum + product end printf("value of f(a) is %f", sum 
